@@ -1,3 +1,4 @@
+//auto generated swerve system
 package frc.robot.subsystems.drivetrain.generated;
 
 import com.ctre.phoenix6.configs.Slot0Configs;

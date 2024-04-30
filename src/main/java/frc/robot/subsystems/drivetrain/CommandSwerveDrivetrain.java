@@ -1,3 +1,4 @@
+//misc. swerve stuff like current limits and gyro reset
 package frc.robot.subsystems.drivetrain;
 
 import java.util.function.Supplier;
@@ -22,21 +23,14 @@ import com.pathplanner.lib.util.ReplanningConfig;
 import edu.wpi.first.wpilibj.DriverStation;
 
 
-import edu.wpi.first.networktables.NetworkTable;
-import edu.wpi.first.networktables.NetworkTableEntry;
-import edu.wpi.first.networktables.NetworkTableInstance;
-import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.smartdashboard.Field2d;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.wpilibj.Notifier;
 import edu.wpi.first.wpilibj.RobotController;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.subsystems.drivetrain.generated.TunerConstants;
-import frc.robot.subsystems.VisionSubsystem;
 
 /**
  * Class that extends the Phoenix SwerveDrivetrain class and implements subsystem
@@ -57,9 +51,6 @@ public class CommandSwerveDrivetrain extends SwerveDrivetrain implements Subsyst
 
 
     WPI_PigeonIMU gyro = new WPI_PigeonIMU(0);
-
-    private Field2d field = new Field2d();
-
 
     public CommandSwerveDrivetrain(SwerveDrivetrainConstants driveTrainConstants, double OdometryUpdateFrequency, SwerveModuleConstants... modules) {
         super(driveTrainConstants, OdometryUpdateFrequency, modules);

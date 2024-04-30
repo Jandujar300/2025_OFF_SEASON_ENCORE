@@ -5,13 +5,10 @@ import com.ctre.phoenix6.controls.Follower;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 
-import edu.wpi.first.wpilibj2.command.Command;
 //import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.Constants;
 import frc.robot.constants.IntakeConstants;
 //import frc.robot.constants.TalonFXConstants;
-import frc.robot.constants.ShooterConstants;
 
 public class IntakeSubsystem extends SubsystemBase {
     TalonFX intakeFront;
